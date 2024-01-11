@@ -1,0 +1,191 @@
+body {
+    font-family: 'Khand', sans-serif;
+    font-weight: 300;
+    color: #333;
+    background: #AB5211;
+    font-size: 1.2em;
+}
+
+#page {
+    /* background: url(images/papercloseup-small.jpg); */
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)  ; 
+}
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4em 0 2em 0;
+    position: relative;
+    z-index: 10;
+}
+
+h1, h2 {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-weight: 400;
+    color: #1A4C61;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 0.5em 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    height: 1.8em;
+    line-height: 1.8em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: font-size 500ms ease, color 500ms ease;
+}
+
+ul li a:hover {
+    font-size: 1.2em;
+    color: #c82430;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    padding: 50px;
+}
+
+footer a {
+    color: #91cae1;
+    text-decoration: none;
+}
+/* Splatter Rules */
+#splatters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+#splatters > img {
+    position: absolute;
+}
+
+#splatters div img {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-4px);
+    width: 15px;
+}
+
+
+#splatter1 {
+    top:0;
+    right:0;
+    width: 30%;
+    z-index: 1;
+}
+
+#splatter4 {
+    top:-3em;
+    left:-3em;
+    width: 70%;
+}
+
+#splatter3 {
+    top:-3em;
+    left:50%;
+    width: 60%;
+}
+
+#splatter2 {
+    top: -5em;
+    left: 15%;
+    width: 60%;
+    z-index: 2;
+}
+
+#green-drip {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    background-color: #c6d7ab;
+    width: 8px;
+    height: 0;
+    animation: drip1 5s ease-out 5s forwards;
+}
+
+#red-drip {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    background-color: #c82430;
+    width: 8px;
+    height: 0;
+    animation: drip2 10s ease-out 3s forwards;
+}
+
+#blue-drip {
+    position: absolute;
+    top: 20px;
+    right: 30%;
+    background-color: #91cae1;
+    width: 8px;
+    height: 0;
+    animation: drip3 6s ease-out 7s forwards;
+}
+
+@keyframes drip1 {
+    from {height: 0;}
+    to { height: 375px;}
+}
+
+@keyframes drip2 {
+    from {height: 0;}
+    to { height: 500px;}
+}
+
+@keyframes drip3 {
+    from {height: 0;}
+    to { height: 305px;}
+}
+
+@media only screen and (min-width: 700px) { 
+    main {display: flex; justify-content: flex-end; min-height: 350px;}
+    main section { flex: 1; }
+    h1 { font-size: 4em; }
+    #splatters {
+        width: 700px;
+        left: 50%;
+        top: -100px;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 1000px) { 
+    h1 { font-size: 5em; padding-left: 20%;}
+    main section { flex: none; width: 15%; }
+
+}
